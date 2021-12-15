@@ -1,0 +1,37 @@
+<header [ngClass]="page == 'home' ? 'opacity' : ''">
+    <div class="menu" [ngClass]="menuActive == false ? 'disabled-menu' : 'active-menu'">
+        <div (clickOutside)="closeMenu()" class="close">
+            <a (click)="closeMenu()">
+                <i class="fas fa-times fa-lg"></i>
+            </a>
+        </div>
+        <a class="menu-item" routerLink="/home">HOME</a>
+        <a class="menu-item" routerLink="/masculino">MASCULINO</a>
+        <a class="menu-item" routerLink="/contato">ENTRE EM CONTATO</a>
+        <div class="social">
+            <a href="face" class="face">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/vittorio_venetooficial/" target="_blank" class="insta">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <div (click)="activeMenu()" class="hamburger"> <i class="fas fa-bars fa-3x"></i> </div>
+        <div class="left-content">
+            <a routerLink="/masculino">MASCULINO</a>
+        </div>
+        <a class="logo" routerLink="/home"> VITTORIO VENETO </a>
+        <div class="right-content">
+            <a routerLink="/contato">ENTRE EM CONTATO</a>
+            <a href="face" class="face">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/vittorio_venetooficial/" target="_blank"  class="insta">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+        </div>
+    </div>
+</header>
+ 

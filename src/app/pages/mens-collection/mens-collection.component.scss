@@ -1,0 +1,167 @@
+section{
+    margin-top: 7em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .image{
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 70px);
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: 20% 60%;
+            position: absolute;
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, .3);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 4.3em;
+                color: var(--color-font);
+                letter-spacing: .3em;
+            }
+        }
+    }
+    .container{
+        position: absolute;
+        margin-top: 7em;
+        padding: 0 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        .content{
+            width: 100%;
+            max-width: 1440px;
+            .description{
+                width: 100%;
+                h1{
+                    font-size: 3em;
+                    color: #101010;
+                }
+            }
+            .double-wrap {
+                margin-top: 5em;
+                display: flex;
+                flex-direction: row;
+            }
+            .triple-wrap {
+                margin-top: 5em;
+                display: flex;
+                flex-direction: row;
+            }
+            .single {
+                margin-top: 5em;
+            }
+            .wrapper-img{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: .3em solid #fff;
+                img{
+                    width: 100%;
+                    max-width: 100vw;
+                    height: 100%;
+                    max-height: 70vh;
+                    object-fit: cover;
+                }
+                .ref{
+                    margin-top: 1.5em;
+                    color: #101010;
+                    font-size: 1.6em;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 4em 0;
+        a{
+            color: #101010;
+            font-size: 1.3em;
+            font-weight: 500;
+            border: 1px solid #101010;
+            width: 10%;
+            min-width: 150px;
+            max-width: 280px;
+            padding: 1em 0;
+            text-align: center;
+            background-color: var(--color-font);
+            position: relative;
+            top: 2em;
+            transition: .4s;
+            border-radius: .4em;
+        }
+        a:hover{
+            background-color: #101010;
+            color: var(--color-font);
+        }
+        a:first-child {
+            margin-right: 1.8em;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section{
+        .image{
+            height: calc(50vh - 70px);
+            .mask{
+                h1{
+                    font-size: 3.0em;
+                    color: var(--color-font);
+                    letter-spacing: .3em;
+                    text-align: center;
+                }
+            }
+        }
+        .container{
+            .content{
+                .description{
+                    width: 100%;
+                    margin-bottom: 2.6em;
+                    h1{
+                        font-size: 2.2em;
+                        color: #101010;
+                        text-align: center;
+                    }
+                }
+                .double-wrap {
+                    margin-top: 0;
+                    flex-direction: column;
+                }
+                .triple-wrap {
+                    margin-top: 0;
+                    flex-direction: column;
+                }
+                .single {
+                    margin-top: 0;
+                }
+                .wrapper-img{
+                    margin-top: 3.4em;
+                    .ref{
+                        margin-top: 1.3em;
+                        font-size: 1.6em;
+                    }
+                }
+            }
+        }
+    }
+}

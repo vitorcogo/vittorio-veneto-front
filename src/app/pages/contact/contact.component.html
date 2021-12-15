@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="banner">
+    <img src="../../../assets/img/banner-contato.jpg" alt="Entre em contato">
+</div>
+<div class="container">
+    <div class="content">
+        <div class="infos">
+            <div class="wrapper">
+                <h1>Localização</h1>
+                <span>Rua Lucas Menegotto, 1270 <br>Bairro Nossa Senhora de Lourdes. <br>Caxias do Sul - RS <br></span>
+                <a href="https://goo.gl/maps/qE72XAyzRwib67zt5" target="_blank">Mapa da Localização</a>
+            </div>
+            <div class="wrapper">
+                <h1>Contatos</h1>
+                <span>Telefone: (54) 3028-1933 | (54) 3028-2651 <br>Whatsapp: (54) 99136-9440 <br>E-mail: contato@vittorioveneto.com.br</span>
+            </div>
+        </div>
+        <div class="form">
+            <h1>Faça seu orçamento, e tire suas dúvidas abaixo!</h1>
+            <div class="box">
+                <form action="">
+                    <div class="wrapper">
+                        <div class="field">
+                            <input type="text" placeholder="Nome" [(ngModel)]="form.name" [ngModelOptions]="{standalone: true}">
+                            <p class="error" *ngIf="!nameIsValid">Nome é Obrigatório</p>
+                        </div>
+                        <div class="field">
+                            <input type="email" placeholder="Email" [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}">
+                            <p class="error" *ngIf="!emailIsValid">Informe um email para contato</p>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Telefone" [(ngModel)]="form.phone" [ngModelOptions]="{standalone: true}">
+                            <p class="error" *ngIf="!phoneIsValid">Informe um número para contato</p>
+                        </div>
+                        <div class="field">
+                            <select [ngClass]="form.contactWay != '' ? 'selected' : ''" [(ngModel)]="form.contactWay" [ngModelOptions]="{standalone: true}">
+                                <option [value]="''" disabled hidden>Meio de Contato</option>
+                                <option [value]="'Email'">Email</option>
+                                <option [value]="'Telefone'">Telefone</option>
+                                <option [value]="'Whatsapp'">Whatsapp</option>
+                            </select>
+                            <p class="error" *ngIf="!contactIsValid">Informe um meio de contato</p>
+                        </div>
+                        <div class="field">
+                            <textarea placeholder="Mensagem" [(ngModel)]="form.message" [ngModelOptions]="{standalone: true}"></textarea>
+                            <p class="error" *ngIf="!messageIsValid">Favor informar a mensagem para contato</p>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button type="button" (click)="this.sendForm()">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
