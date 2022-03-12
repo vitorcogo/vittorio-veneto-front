@@ -5,8 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { MensCollectionComponent } from './pages/mens-collection/mens-collection.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent},
+  {path: '', pathMatch: 'full', component: HomeComponent},
   {path: 'contato', component: ContactComponent},
   {path: 'masculino', component: MensCollectionComponent}
 ];
