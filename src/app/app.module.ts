@@ -11,6 +11,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { MensCollectionComponent } from './pages/mens-collection/mens-collection.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { CompanyComponent } from './pages/company/company.component';
+import { CollectionsModule } from './pages/collections/collections.module';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     FooterComponent,
     HeaderComponent,
     ContactComponent,
-    MensCollectionComponent
+    MensCollectionComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    CollectionsModule
   ],
   exports: [
     HeaderComponent,

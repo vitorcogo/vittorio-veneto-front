@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { CompanyComponent } from './pages/company/company.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MensCollectionComponent } from './pages/mens-collection/mens-collection.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: HomeComponent},
-  {path: 'contato', component: ContactComponent},
-  {path: 'masculino', component: MensCollectionComponent}
+  { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'masculine', component: MensCollectionComponent },
+  { path: 'company', component: CompanyComponent },
+  { path: 'collections', loadChildren: './pages/collections/collections.module#CollectionsModule' }
 ];
 
 @NgModule({

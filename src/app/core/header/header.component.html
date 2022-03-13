@@ -6,10 +6,10 @@
             </a>
         </div>
         <a class="menu-item" routerLink="/">HOME</a>
-        <a class="menu-item" routerLink="/masculino">MASCULINO</a>
-        <a class="menu-item" routerLink="/contato">ENTRE EM CONTATO</a>
+        <a class="menu-item" routerLink="/masculine">MASCULINO</a>
+        <a class="menu-item" routerLink="/contact">ENTRE EM CONTATO</a>
         <div class="social">
-            <a href="face" class="face">
+            <a href="https://www.facebook.com/vittoriovenetomenswear" target="_blank" class="face">
                 <i class="fab fa-facebook fa-lg"></i>
             </a>
             <a href="https://www.instagram.com/vittorio_venetooficial/" target="_blank" class="insta">
@@ -20,12 +20,24 @@
     <div class="content">
         <div (click)="activeMenu()" class="hamburger"> <i class="fas fa-bars fa-3x"></i> </div>
         <div class="left-content">
-            <a routerLink="/masculino">MASCULINO</a>
+            <a routerLink="/">HOME</a>
+            <div class="collection-wrapper">
+                <a (click)="collectionModal = !collectionModal" class="collection-link">
+                    COLEÇÃO
+                </a>
+                <div class="collection-modal" *ngIf="collectionModal">
+                    <a routerLink="/collections/classic" class="collection-item">Classic</a>
+                    <a routerLink="/collections/urban" class="collection-item">Urban</a>
+                    <a routerLink="/collections/authentic" class="collection-item">Authentic</a>
+                </div>
+            </div>
+            <a routerLink="/company">A EMPRESA</a>
         </div>
-        <a class="logo" routerLink="/"> VITTORIO VENETO </a>
+        <a class="logo" routerLink="/"> 
+            <img src="../../../assets/img/logo.png" alt="Logo Vittorio Veneto"> </a>
         <div class="right-content">
-            <a routerLink="/contato">ENTRE EM CONTATO</a>
-            <a href="face" class="face">
+            <a routerLink="/contact">ENTRE EM CONTATO</a>
+            <a href="https://www.facebook.com/vittoriovenetomenswear" target="_blank" class="face">
                 <i class="fab fa-facebook fa-lg"></i>
             </a>
             <a href="https://www.instagram.com/vittorio_venetooficial/" target="_blank"  class="insta">

@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() page: string;
   public menuActive: boolean = false;
+  public collectionModal: boolean = false;
 
   public activeMenu() {
     this.menuActive = !this.menuActive;
