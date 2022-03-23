@@ -8,8 +8,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-
-  @ViewChild('video') video: ElementRef;
   ngOnInit(): void {
   }
 

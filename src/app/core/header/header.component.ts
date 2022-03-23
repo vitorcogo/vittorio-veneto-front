@@ -12,7 +12,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() page: string;
   public menuActive: boolean = false;
   public collectionModal: boolean = false;
 

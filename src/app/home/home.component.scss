@@ -31,3 +31,96 @@
         }
     }
 }
+
+section {
+    margin-top: 8.5em;
+    height: auto;
+    min-height: calc(100vh - 85px - 170px); // 100vh - header size - footer size
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .video{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #000;
+        video{
+            width: 100%;
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            // background-color: rgba(0, 0, 0, .3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 4.3em;
+                text-align: center;
+                color: var(--color-font);
+                letter-spacing: 3px;
+            }
+        }
+    }
+    .container {
+        display: flex;
+        padding: 0 5em;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        .content{
+            width: 100%;
+            max-width: 1440px;
+            .colections-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                .banner-image {
+                    height: 100%;
+                    max-height: 700px;
+                    margin: 0 15px;
+                    position: relative;
+                    img {
+                        height: 100%;
+                        max-height: 700px;
+                        -webkit-filter: grayscale(100%);
+                        filter: grayscale(100%);
+                        cursor: pointer;
+                        transition: .4s;
+                    }
+                    img:hover {
+                        -webkit-filter: grayscale(0%);
+                        filter: grayscale(0%);
+                    }
+                    h1{
+                        position: absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                        cursor: pointer;
+                        font-size: 3em;
+                        text-align: center;
+                        color: var(--color-font);
+                        letter-spacing: 3px;
+                        z-index: 10;
+                        font-weight: 500;
+                    }
+                    h1:hover + img {
+                        -webkit-filter: grayscale(0%);
+                        filter: grayscale(0%);
+                    }
+                }
+                .banner-image:first-child,
+                .banner-image:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

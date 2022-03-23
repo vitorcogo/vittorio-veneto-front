@@ -1,11 +1,31 @@
-<app-header [page]="'home'"></app-header>
-<div class="home">
+<app-header></app-header>
+<section>
     <div class="video">
-        <video muted autoplay loop onloadedmetadata="this.muted = false" allow="autoplay;">
-            <source src="../../assets/video/video-home-trim.mp4" type="video/mp4">
+        <video [muted]="'muted'" autoplay loop allow="autoplay;">
+            <source src="../../assets/video/video-home.webm" type="video/webm" />
         </video>
-        <!-- <iframe src="../../assets/video/video-home-trim.mp4" allow="autoplay; fullscreen" referrerpolicy="no-referrer">
-        </iframe> -->
-        <div class="mask"><h1>INVERNO 2022</h1></div>
+        <div class="mask">
+            <h1>INVERNO 2022</h1>
+        </div>
     </div>
-</div>
+    <div class="container">
+        <div class="content">
+            <p>oiii</p>
+            <div class="colections-wrapper">
+                <div class="banner-image">
+                    <h1>Classic</h1>
+                    <img src="../../assets/img/classic/22409-1.jpg" alt="Classic">
+                </div>
+                <div class="banner-image">
+                    <h1>Urban</h1>
+                    <img src="../../assets/img/urban/22433.jpg" alt="Urban">
+                </div>
+                <div class="banner-image">
+                    <h1>Authentic</h1>
+                    <img src="../../assets/img/authentic/22425-1.jpg" alt="Authentic">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
