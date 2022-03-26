@@ -13,16 +13,17 @@ import {HttpClientModule} from '@angular/common/http';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { CompanyComponent } from './pages/company/company.component';
 import { CollectionsModule } from './pages/collections/collections.module';
+import { CoreModule } from './core/core.module';
+import { RepresentativesComponent } from './pages/representatives/representatives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent,
-    HeaderComponent,
     ContactComponent,
     MensCollectionComponent,
-    CompanyComponent
+    CompanyComponent,
+    RepresentativesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,11 +31,8 @@ import { CollectionsModule } from './pages/collections/collections.module';
     FormsModule,
     HttpClientModule,
     LazyLoadImageModule,
-    CollectionsModule
-  ],
-  exports: [
-    HeaderComponent,
-    FooterComponent
+    CollectionsModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,8 @@ import { CollectionsRoutingModule } from "./collections-routing.module";
 import { ClassicComponent } from './classic/classic.component';
 import { AuthenticComponent } from './authentic/authentic.component';
 import { UrbanComponent } from './urban/urban.component';
+import { CoreModule } from "src/app/core/core.module";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -13,7 +15,9 @@ import { UrbanComponent } from './urban/urban.component';
     ],
     imports: [
         CommonModule,
-        CollectionsRoutingModule
+        RouterModule,
+        CollectionsRoutingModule,
+        CoreModule
     ],
     exports: [
         ClassicComponent, 

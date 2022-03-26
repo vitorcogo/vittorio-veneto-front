@@ -40,17 +40,17 @@ export class ContactComponent implements OnInit {
 
   public formIsValid(): boolean {
 
-    this.contactIsValid = this.stringIsNullOrEmpty(this.form.contactWay);
-    this.nameIsValid = this.stringIsNullOrEmpty(this.form.name);
-    this.messageIsValid = this.stringIsNullOrEmpty(this.form.message);
+    this.contactIsValid = this.isNullOrEmpty(this.form.contactWay);
+    this.nameIsValid = this.isNullOrEmpty(this.form.name);
+    this.messageIsValid = this.isNullOrEmpty(this.form.message);
 
     if (this.form.contactWay == 'Email') {
-      this.emailIsValid = this.stringIsNullOrEmpty(this.form.email);
+      this.emailIsValid = this.isNullOrEmpty(this.form.email);
       this.phoneIsValid = true;
     }
     
     if (this.form.contactWay == 'Telefone' || this.form.contactWay == 'Whatsapp') {
-      this.phoneIsValid = this.stringIsNullOrEmpty(this.form.phone);
+      this.phoneIsValid = this.isNullOrEmpty(this.form.phone);
       this.emailIsValid = true;
     }
 
@@ -62,5 +62,5 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  stringIsNullOrEmpty = (string: string) => string && string != '';
+  isNullOrEmpty = (string: string) => string && string != '';
 }

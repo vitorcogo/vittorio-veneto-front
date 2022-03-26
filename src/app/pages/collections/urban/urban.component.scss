@@ -1,0 +1,8 @@
+section {
+    margin-top: 8.5em;
+    height: auto;
+    min-height: calc(100vh - 85px - 170px); // 100vh - header size - footer size
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
