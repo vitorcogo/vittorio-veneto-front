@@ -1,37 +1,3 @@
-.home{
-    height: 100vh;
-    display: flex;
-    width: 100%;
-    background-color: #222222;
-    .video{
-        width: 100%;
-        height: 100%;
-        video{
-            width: 100%;
-            position: fixed;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-    .mask{
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, .3);
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        h1{
-            font-size: 4.3em;
-            text-align: center;
-            color: var(--color-font);
-            letter-spacing: 3px;
-        }
-    }
-}
-
 section {
     margin-top: 8.5em;
     height: auto;
@@ -60,6 +26,7 @@ section {
             justify-content: center;
             h1{
                 font-size: 4.3em;
+                font-weight: normal;
                 text-align: center;
                 cursor: default;
                 color: var(--color-font);

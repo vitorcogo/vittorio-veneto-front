@@ -6,6 +6,7 @@ import { AuthenticComponent } from './authentic/authentic.component';
 import { UrbanComponent } from './urban/urban.component';
 import { CoreModule } from "src/app/core/core.module";
 import { RouterModule } from "@angular/router";
+import { LazyLoadImageModule } from "ng-lazyload-image";
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { RouterModule } from "@angular/router";
         CommonModule,
         RouterModule,
         CollectionsRoutingModule,
+        LazyLoadImageModule,
         CoreModule
     ],
     exports: [

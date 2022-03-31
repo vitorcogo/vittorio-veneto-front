@@ -8,7 +8,6 @@ import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { MensCollectionComponent } from './pages/mens-collection/mens-collection.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { CompanyComponent } from './pages/company/company.component';
@@ -21,7 +20,6 @@ import { RepresentativesComponent } from './pages/representatives/representative
     AppComponent,
     HomeComponent,
     ContactComponent,
-    MensCollectionComponent,
     CompanyComponent,
     RepresentativesComponent
   ],
