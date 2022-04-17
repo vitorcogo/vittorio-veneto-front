@@ -164,3 +164,15 @@ section {
         }
     }
 }
+
+@media only screen and (max-width: 900px) {
+    section {
+        .video {
+            .mask{
+                h1 {
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+}
