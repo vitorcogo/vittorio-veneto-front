@@ -1,7 +1,5 @@
 # VittorioVeneto
 
-www.vittorioveneto.com.br
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Development server
